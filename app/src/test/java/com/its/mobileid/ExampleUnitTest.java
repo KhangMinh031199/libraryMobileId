@@ -1,4 +1,4 @@
-package com.mobileid.mobileid_sdk;
+package com.its.mobileid;
 
 import org.junit.Test;
 

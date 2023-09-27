@@ -1,4 +1,4 @@
-package com.mobileid.mobileid_sdk;
+package com.its.mobileid;
 
 import androidx.appcompat.app.AppCompatActivity;
 

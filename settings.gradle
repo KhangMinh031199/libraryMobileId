@@ -12,8 +12,12 @@ dependencyResolutionManagement {
 
         mavenCentral()
         maven { url 'https://jitpack.io' }
+        maven {
+            url "https://artifacts.ipification.com/artifactory/mobile-libs-release/"
+        }
     }
 }
 
 rootProject.name = "MobileID_SDK"
 include ':app'
+include ':mobileid'
