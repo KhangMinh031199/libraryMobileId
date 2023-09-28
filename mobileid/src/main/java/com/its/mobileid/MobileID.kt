@@ -2,7 +2,6 @@ package com.its.mobileid
 
 import android.content.Context
 import android.net.Uri
-import android.os.Environment
 import com.ipification.mobile.sdk.android.IPConfiguration
 import com.ipification.mobile.sdk.android.IPEnvironment
 import com.ipification.mobile.sdk.android.IPificationServices
@@ -41,16 +40,16 @@ class MobileID {
 
             val coverageCallback = object : CellularCallback<CoverageResponse>
             {
-                override fun onSuccess(res: CoverageResponse) {
-                    val response = MobileIDCoverageResponse(res)
-                    callback.onSuccess(response)
+                override fun onSuccess(response: CoverageResponse) {
+                    val res = MobileIDCoverageResponse(response)
+                    callback.onSuccess(res)
                 }
                 override fun onError(error: CellularException) {
                     val err = MobileIDError(error)
                     callback.onError(err)
                 }
             }
-            IPificationServices.startCheckCoverage(context = context, callback = coverageCallback)
+            IPificationServices.startCheckCoverage(context = context, phoneNumber= phoneNumber, callback = coverageCallback)
         }
     }
 }
