@@ -9,7 +9,4 @@ class MobileIDCoverageResponse(private val coverageResponse: CoverageResponse) {
     fun getOperatorCode() : String?{
         return coverageResponse.getOperatorCode()
     }
-    fun getErrorMessage(){
-
-    }
 }
